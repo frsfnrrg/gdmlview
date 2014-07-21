@@ -25,9 +25,6 @@
 /vis/viewer/set/autoRefresh false
 /vis/verbose errors
 #
-# Draw geometry:
-/vis/drawVolume
-#
 # Specify view angle:
 /vis/viewer/set/viewpointThetaPhi 90. 180.
 #
@@ -35,7 +32,10 @@
 /vis/viewer/zoom 1.4
 #
 # Specify style (surface or wireframe):
-#/vis/viewer/set/style wireframe
+/vis/viewer/set/style surface
+#
+# Draw geometry:
+/vis/drawVolume
 #
 # Draw coordinate axes:
 #/vis/scene/add/axes 0 0 0 1 m

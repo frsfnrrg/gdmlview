@@ -50,10 +50,18 @@ public:
 
 int main(int argc,char** argv)
 {
+    const char* filename = "output.gdml";
+    if (argc > 1) {
+        filename = argv[1];
+    } else {
+        printf("Usage: gdml thingy.gdml\n");
+        return 1;
+    }
+
     G4RunManager* runManager = new G4RunManager();
 
     G4GDMLParser parser;
-    parser.Read("output.gdml",false);
+    parser.Read(filename, false);
     G4VUserDetectorConstruction* detector = new GDMLDetectorConstruction(parser.GetWorldVolume());
 
     runManager->SetUserInitialization(detector);
