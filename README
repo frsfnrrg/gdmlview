@@ -1,1 +1,3 @@
 A simple viewer for GDML files, based loosely on the Geant4 example N02.
+
+Tested with geant 4.9.6.p03.
